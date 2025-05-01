@@ -15,7 +15,7 @@ dotenv.config()
 const port=process.env.PORT||3000;
 
 //connect to mongodb
-const mongodbURI=process.env.mongodbURI
+const mongodbURI=process.env.MONGODBURI
 try {
     mongoose.connect(mongodbURI);
     console.log("Connected to mongodb")
