@@ -7,12 +7,15 @@ import cors from "cors";
 
 
 const app = express()
-app.use(cors({
-    origin: "https://book-bazzar-frontend.vercel.app",
-    credentials: true
-  }));
 app.use(express.json());
-
+const corsOptions = {
+    origin: ['https://book-bazzar-frontend.vercel.app','http://localhost:5173','*'], 
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow only required methods
+    allowedHeaders: ['Content-Type', 'Authorization'], // Include any necessary headers
+    credentials: true,
+  };
+  
+  app.use(cors(corsOptions));
 dotenv.config()
 
 const port=process.env.PORT||3000;
