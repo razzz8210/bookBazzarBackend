@@ -24,7 +24,7 @@ export const SignUp =async (req,res)=>{
             user:{
                 _id:createdUser._id,
                 fullname:createdUser.fullname,
-                password:createdUser.password
+                email:createdUser.email
             }
             
         })

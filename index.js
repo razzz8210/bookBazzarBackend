@@ -9,7 +9,7 @@ import cors from "cors";
 const app = express()
 app.use(express.json());
 const corsOptions = {
-    origin: ['https://book-bazzar-frontend.vercel.app','http://localhost:5173','*'], 
+    origin: ['https://book-bazzar-frontend.vercel.app','http://localhost:5173','http://localhost:5174','*'], 
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow only required methods
     allowedHeaders: ['Content-Type', 'Authorization'], // Include any necessary headers
     credentials: true,
