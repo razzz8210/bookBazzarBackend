@@ -31,6 +31,9 @@ try {
 
 app.use("/book",BookRoute);
 app.use("/user",UserRoute);
+app.get("/", (req, res) => {
+  res.send("Welcome to the Book Bazzar API");
+});
 
 app.listen(port, () => {
   console.log(`App listning on port ${port}`)
